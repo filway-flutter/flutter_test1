@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test1/less_group_page.dart';
+import 'package:flutter_test1/statefull_group_page.dart';
 
 void main() {
-  runApp(const LessGroupPage());
+  runApp(const StateFullGroupPage());
 }
 
 class MyApp extends StatelessWidget {
