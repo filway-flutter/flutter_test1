@@ -10,24 +10,46 @@ import 'package:flutter_test1/res_page.dart';
 import 'package:flutter_test1/statefull_group_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const DynamicTheme());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class DynamicTheme extends StatefulWidget {
+  const DynamicTheme({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  @override
+  State<DynamicTheme> createState() => _DynamicThemeState();
+}
+
+class _DynamicThemeState extends State<DynamicTheme> {
+  Brightness _brightness = Brightness.light;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        brightness: _brightness,
       ),
       home: Scaffold(
-        appBar: AppBar(title: Text('如何创建和使用Flutter的路由与导航?')),
-        body: const RouteNavigator(),
-      ),
+          appBar: AppBar(title: Text('如何创建和使用Flutter的路由与导航?')),
+          body: Column(
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    if (_brightness == Brightness.dark) {
+                      _brightness = Brightness.light;
+                    } else {
+                      _brightness = Brightness.dark;
+                    }
+                  });
+                },
+                child: Text('切换主题'),
+              ),
+              const RouteNavigator(),
+            ],
+          )),
       routes: <String, WidgetBuilder>{
         'plugin': (BuildContext context) => PluginUse(),
         'less': (BuildContext context) => LessGroupPage(),
