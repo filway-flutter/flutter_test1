@@ -5,6 +5,7 @@ import 'package:flutter_test1/flutter_widget_lifecycle.dart';
 import 'package:flutter_test1/gesture_page.dart';
 import 'package:flutter_test1/launch_page.dart';
 import 'package:flutter_test1/less_group_page.dart';
+import 'package:flutter_test1/photo_app.dart';
 import 'package:flutter_test1/plugin_use.dart';
 import 'package:flutter_test1/res_page.dart';
 import 'package:flutter_test1/statefull_group_page.dart';
@@ -64,6 +65,7 @@ class _DynamicThemeState extends State<DynamicTheme> {
         'launch': (BuildContext context) => LaunchPage(),
         'lifecycle': (BuildContext context) => WidgetLifeCycle(),
         'app_lifecycle': (BuildContext context) => AppLifecycle(),
+        'photo': (BuildContext context) => PhotoApp(),
       },
     );
   }
@@ -100,7 +102,7 @@ class _RouteNavigatorState extends State<RouteNavigator> {
           _item('如何导入和使用Flutter的资源文件?', ResPage(), 'res_page'),
           _item('如何打开第三方应用?', LaunchPage(), 'launch'),
           _item('页面生命周期', WidgetLifeCycle(), 'lifecycle'),
-          _item('应用生命周期', AppLifecycle(), 'app_lifecycle'),
+          _item('【实战尝鲜】拍照APP开发', PhotoApp(), 'photo'),
         ],
       ),
     );
