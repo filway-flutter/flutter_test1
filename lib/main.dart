@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test1/animation.dart';
 import 'package:flutter_test1/app_lifecycle.dart';
 import 'package:flutter_test1/flutter_layout_page.dart';
 import 'package:flutter_test1/flutter_widget_lifecycle.dart';
@@ -66,6 +67,7 @@ class _DynamicThemeState extends State<DynamicTheme> {
         'lifecycle': (BuildContext context) => WidgetLifeCycle(),
         'app_lifecycle': (BuildContext context) => AppLifecycle(),
         'photo': (BuildContext context) => PhotoApp(),
+        'animation_01': (BuildContext context) => AnimationApp(),
       },
     );
   }
@@ -104,6 +106,7 @@ class _RouteNavigatorState extends State<RouteNavigator> {
           _item('页面生命周期', WidgetLifeCycle(), 'lifecycle'),
           _item('Flutter应用生命周期', AppLifecycle(), 'app_lifecycle'),
           _item('【实战尝鲜】拍照APP开发', PhotoApp(), 'photo'),
+          _item('动画01', AnimationApp(), 'animation_01'),
         ],
       ),
     );
