@@ -28,6 +28,7 @@ class _DynamicThemeState extends State<DynamicTheme> {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        //fontFamily: 'Crimson', // 全局字体
         primarySwatch: Colors.blue,
         brightness: _brightness,
       ),
@@ -45,7 +46,10 @@ class _DynamicThemeState extends State<DynamicTheme> {
                     }
                   });
                 },
-                child: Text('切换主题'),
+                child: Text(
+                  '切换主题abc',
+                  style: TextStyle(fontFamily: 'Career'),
+                ),
               ),
               const RouteNavigator(),
             ],
