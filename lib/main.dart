@@ -102,6 +102,7 @@ class _RouteNavigatorState extends State<RouteNavigator> {
           _item('如何导入和使用Flutter的资源文件?', ResPage(), 'res_page'),
           _item('如何打开第三方应用?', LaunchPage(), 'launch'),
           _item('页面生命周期', WidgetLifeCycle(), 'lifecycle'),
+          _item('Flutter应用生命周期', AppLifecycle(), 'app_lifecycle'),
           _item('【实战尝鲜】拍照APP开发', PhotoApp(), 'photo'),
         ],
       ),

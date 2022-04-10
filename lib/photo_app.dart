@@ -37,11 +37,13 @@ class _PhotoAppState extends State<PhotoApp> {
         ),
       ),
       body: Center(
-        child: Wrap(
-          spacing: 5,
-          runSpacing: 5,
-          children: _getImages(),
-        ),
+        child: _images.length == 0
+            ? Text('No image selected')
+            : Wrap(
+                spacing: 5,
+                runSpacing: 5,
+                children: _getImages(),
+              ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _pickImage,
